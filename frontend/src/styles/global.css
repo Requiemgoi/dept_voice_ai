@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 257 60% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 257 58% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 257 58% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 263 70% 50%;
+    /* #8b5cf6 Violet 500 */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 257 50% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 257 40% 20%;
+    --muted-foreground: 217 24% 65%;
+
+    --accent: 180 70% 50%;
+    /* Cyan */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 257 40% 20%;
+    --input: 257 40% 20%;
+    --ring: 263 70% 50%;
+
+    --radius: 0.75rem;
+
+    --neon-purple: #b0fb5d;
+    --neon-purple-hsl: 280 100% 60%;
+    --neon-cyan-hsl: 190 100% 50%;
+    --neon-pink-hsl: 330 100% 60%;
+  }
+
+  .dark {
+    --background: 257 60% 8%;
+    --foreground: 210 40% 98%;
+    --card: 257 58% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 257 58% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 263 70% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 257 50% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 257 40% 15%;
+    --muted-foreground: 217 24% 65%;
+    --accent: 180 70% 50%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 257 40% 15%;
+    --input: 257 40% 15%;
+    --ring: 263 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(15, 10, 40, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.glass-strong {
+  background: rgba(15, 10, 40, 0.8);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+/* Neon glow effects */
+.neon-glow {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.2), 0 0 60px rgba(139, 92, 246, 0.1);
+}
+
+.neon-glow-cyan {
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.3), 0 0 40px rgba(34, 211, 238, 0.2), 0 0 60px rgba(34, 211, 238, 0.1);
+}
+
+.neon-glow-pink {
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.3), 0 0 40px rgba(236, 72, 153, 0.2), 0 0 60px rgba(236, 72, 153, 0.1);
+}
+
+.pulsing-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, rgba(139, 92, 246, 0) 70%);
+  filter: blur(20px);
+  animation: float 10s infinite ease-in-out;
+}
