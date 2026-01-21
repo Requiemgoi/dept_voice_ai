@@ -9,7 +9,7 @@ REM Check virtual environment in parent directory
 if not exist "..\\.venv" (
     echo [ERROR] Virtual environment not found!
     echo Please create it: python -m venv .venv
-    echo Run this command from project root: c:\Projects\dept_voice_ai
+    echo Run this command from the project root directory
     pause
     exit /b 1
 )
